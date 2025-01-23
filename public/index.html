@@ -1,0 +1,141 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Rest API for various purposes, use Rioo as not apikey.">
+    <title>Rioo API</title>
+    <meta property="og:title" content="Rioo?" />
+    <meta property="og:url" content="https://restapi.riooxdzz.me" />
+    <meta property="og:site_name" content="Rioo API" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Free Rest API for various purposes, use Rioo as not apikey." />
+    <meta property="og:image" content="/image/logo.png" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: pulse 2s infinite;
+        }
+
+        .description {
+            margin: 1rem 0;
+        }
+
+        .controls {
+            margin: 1rem 0;
+        }
+
+        select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            color: #1a1a1a;
+            border: none;
+            cursor: pointer;
+        }
+
+        .links {
+            margin-top: 2rem;
+        }
+
+        .divider {
+            display: inline-block;
+            width: 1px;
+            height: 20px;
+            background-color: #fff;
+            margin: 0 1rem;
+        }
+
+        /* Animasi */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Tema terang */
+        body.light-mode {
+            background-color: #f3f3f3;
+            color: #333;
+        }
+
+        body.light-mode select {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .toggle-theme {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 0.5rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="toggle-theme" onclick="toggleTheme()">💡</button>
+    <div class="center">
+        <h1>Rioo API</h1>
+        <div class="description">
+            Free Rest API for various purposes, use <b>Rioo Api</b> as No Apikey.
+        </div>
+        <div class="controls">
+            <form>
+                <div class="select">
+                    <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                        <option value="" selected disabled>--- AI ---</option>
+                        <option value="/api/gptturbo?message=hallo">Gptturbo</option>
+                        <option value="" selected disabled>--- ORDERKUOTA ---</option>
+                        <option value="/api/orkut/createpayment?amount=1000&codeqr=00020101021126670016COM.NOBUBANK.WWW01189360050300000879140214525345686613900303UMI51440014ID.CO.QRIS.WWW0215ID20232810946640303UMI5204541153033605802ID5919RIOOSTORE OK12721696009TANGERANG61051511162070703A016304B040">QrisOrkut</option>
+                        <option value="/api/orkut/cekstatus?merchant=merchant&keyorkut=keyorkut">CekStatusOrkut</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="links">
+            <a href="https://github.com/riooxdzzz">Made by <b>Rioo?</b></a>
+            <span class="divider"></span>
+        </div>
+    </div>
+    <iframe src="/music/song.mp3" allow="autoplay" style="display:none"></iframe>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
+</body>
+
+</html>
